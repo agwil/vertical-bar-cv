@@ -6,8 +6,8 @@
 
 % Set margins
 \RequirePackage[a4paper,
-			    left=5mm,
-			    right=5mm,
+			    left=20mm,
+			    right=20mm,
 			    top=20mm,
 			    bottom=20mm,
 			    bindingoffset=0mm
@@ -37,6 +37,17 @@
     }%
 }
 
+% Contact block
+\newcommand{\contact}[4]{%
+    \centerline{{\fontfamily{cmss}\selectfont%
+        \makebox[0pt][c]{%
+            \faicon{phone} #1 {\large\textperiodcentered} \faicon{envelope-o} #2 {\large\textperiodcentered} \faicon{github} #3 {\large\textperiodcentered} \faicon{linkedin} #4
+            % \faicon{envelope-o} #1 {\large\textperiodcentered} \faicon{github} #2 {\large\textperiodcentered} \faicon{globe} #3
+            }%
+        }%
+    }%
+}
+
 % Contact favicons
 \RequirePackage{fontawesome}
 \newcommand{\email}[1]{%
@@ -54,20 +65,25 @@
 \newcommand{\website}[1]{%
   \centerline{{\fontfamily{qcr}\selectfont \faicon{globe} #1}}
 }
-
-% Contact block
-\newcommand{\contact}[3]{%
-    \centerline{{\fontfamily{cmss}\selectfont%
-        \makebox[0pt][c]{%
-            \faicon{envelope-o} #1 {\large\textperiodcentered} \faicon{github} #2 {\large\textperiodcentered} \faicon{globe} #3
-            }%
-        }%
-    }%
+\newcommand{\mobile}[1]{%
+  \centerline{{\fontfamily{qcr}\selectfont \faicon{phone} #1}}
 }
 
-% Margin text
-\newcommand{\martxt}[1]{\small{\textbf{\emph{#1}}}}
-\newcommand{\mardte}[1]{\small{\emph{#1}}}
+% Bullets
+\newcommand{\blackbullet}{\shiftalong{-0.34cm}\footnotesize\faicon{circle}\enspace}
+\newcommand{\hollowbullet}{\shiftalong{-0.31cm}\footnotesize\faicon{genderless}\enspace}
+\renewcommand{\labelitemi}{\faicon{angle-right}} % list item bullets are changed to '>'
 
-% Renew commands
-\renewcommand{\labelitemi}{\faicon{angle-right}} % change itemize bullet labels to '>'
+% Margin text
+\newcommand{\martxt}[1]{\normalsize{\textbf{\emph{#1}}}} % bold margin text
+\newcommand{\martxtsm}[1]{\small{{\emph{#1}}}} % small bold margin text
+\newcommand{\mardte}[1]{\small{\emph{#1}}} % non-bold margin text for dates
+
+% Body text
+\newcommand{\headtxt}[1]{\normalsize\textbf{#1}} % heading text
+\newcommand{\bullettxt}[1]{\normalsize{\emph{#1}}} % small bold italics for emphasised list items
+
+% List specific commands
+\newcommand{\twothirdsskip}{\vspace{-0.67\baselineskip}}
+\newcommand{\fourthirdsskip}{\vspace{-1.33\baselineskip}}
+\newcommand{\nosep}{\itemsep0pt} % no separation between list items
