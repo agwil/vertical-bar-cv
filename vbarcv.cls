@@ -39,7 +39,7 @@
 
 % Contact block
 \newcommand{\contact}[4]{%
-    \centerline{{\fontfamily{cmss}\selectfont%
+        \centerline{{\textsf\selectfont%
         \makebox[0pt][c]{%
             \faicon{phone} #1 {\large\textperiodcentered} \faicon{envelope-o} #2 {\large\textperiodcentered} \faicon{github} #3 {\large\textperiodcentered} \faicon{linkedin} #4
             % \faicon{envelope-o} #1 {\large\textperiodcentered} \faicon{github} #2 {\large\textperiodcentered} \faicon{globe} #3
