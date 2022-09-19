@@ -1,0 +1,116 @@
+\documentclass{vbarcv}
+\usepackage{enumitem}
+\usepackage[default]{sourcesanspro} % comment this out to use computer modern serif
+% \usepackage[default]{roboto}
+% \usepackage[default]{opensans}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{lipsum}  
+
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1em}
+\linespread{1.1}
+\newcommand{\shiftalong}[1]{\hspace{#1}}
+
+\usepackage{lastpage}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+
+\rfoot{\emph{Your Name for the footer}\hspace{1pt} | \hspace{1pt} \faicon{file-o}\hspace{1pt} \thepage \hspace{1pt}of \pageref*{LastPage}}
+
+\begin{document}
+% \thispagestyle{empty} 
+
+\name{Your Name Here}
+\smallskip
+\address{Your Address}{Your Town}{Your City}{Your Postcode}
+\smallskip
+\contact{{Your Phone Number}}{\href{mailto:youremail@provider.com}{youremailaddress}}{\href{https://github.com/you}{your github}}{\href{https://www.linkedin.com/in/you/}{your-linkedin}}
+% {adamglw}}{\href{https://adamglw.com}{adamglw.com}
+
+\lipsum[1-3]
+
+\begin{center}
+\begin{longtable}{r|p{0.84\linewidth}}
+%--------------------CURRENT ROLE--------------------%
+\martxt{Experience}         & \blackbullet \normalsize\textbf{Job Title}, Company Name\\[0.25em]
+\mardte{start date--\enspace} &  Description of role. Line break needed after first line. \\
+\mardte{end date} & \lipsum[4-4]\\
+& \\[-0.75em]
+&  \bullettxt{Contributions:}\\
+                    & \twothirdsskip 
+                      \begin{itemize}\nosep
+                        \item Describe.
+                        \item Some.
+                        \item Contributions.
+                      \end{itemize}\\ \\[-1.75em]
+& \bullettxt{Technologies used:}\\
+                     & \fourthirdsskip
+                      \begin{itemize}\nosep
+                        \item List the technologies.
+                      \end{itemize}\\
+%--------------------PREVIOUS ROLE 1-----------------%
+\mardte{start date--\enspace} & \hollowbullet \headtxt{Job Title}, Company Name\\[0.25em]
+\mardte{end date} & \lipsum[5-5]\\
+& \\[-0.75em]
+&  \bullettxt{Contributions:}\\
+                    & \twothirdsskip 
+                      \begin{itemize}\nosep
+                        \item Describe.
+                        \item Some.
+                        \item Contributions.
+                      \end{itemize}\\ \\[-1.75em]
+& \bullettxt{Technologies used:}\\
+                     & \fourthirdsskip
+                      \begin{itemize}\nosep
+                        \item List the technologies.
+                      \end{itemize}\\
+%--------------------PREVIOUS ROLE 2-----------------%   
+% Copy PREVIOUS ROLE 1 above.
+%--------------------EDUCATION-----------------------------%
+\martxt{Education}  & \blackbullet \headtxt{PhD/MSc...} in <your subject>, University Name\\[0.33em]
+\mardte{start date--\enspace} & Descibe your degree/research. Line break needed end of first line.\\
+\mardte{end date} & \lipsum[7-7]\\
+&\\[-1em]
+& \bullettxt{Technologies:}\\
+                     & \fourthirdsskip
+                      \begin{itemize}\nosep
+                        \item List the technologies.
+                      \end{itemize}\\
+                    & Link to thesis here... \href{https://yourthesis.com}{\emph{Title of your thesis}}.\\
+                    & \\[-0.75em]
+& \martxt{Publications and Presentations}\\
+                    & \fourthirdsskip
+                      \begin{itemize}\nosep
+                        %
+                        \item \href{https://yourfirstpublication.com}{Your first publication}. YOU et al. (year). \emph{Journal}.
+                        %
+                        \item \href{https://yoursecondpublication.com}{Your second publication}. YOU et al. (year). \emph{Journal}.
+                      \end{itemize}\\
+                       & \\
+%--------------------UNDERGRADUATE------------------%
+\mardte{start date--\enspace} & \hollowbullet \headtxt{BSc...} in <your subject>, University Name\\[0.33em]
+\mardte{end date} & \lipsum[8-8]\\ & Related studies,\\
+                    & \fourthirdsskip
+                      \begin{itemize}\nosep
+                        \item \emph{General area 1}: List some
+                        \item \emph{General area 2}: classes
+                        \item \emph{General area 3}: you took.
+                      \end{itemize}\\
+                    & \\
+%--------------------SKILLS------------------------%                    
+\martxt{Skills}     & \blackbullet \normalsize{Languages and technologies I'm comfortable with and some practices I live by:}\\[0.5em]
+\martxtsm{Languages} & \hollowbullet \normalsize{List languages you are happy working with.}
+&\\[-0.5em]
+\martxtsm{Technologies}& \hollowbullet \normalsize{List technologies you're happy working with.}\\
+&\\[-0.5em]
+\martxtsm{Practices}   &  \hollowbullet \normalsize{List some practices you... practice.}\\[1em]
+                    & \\
+                    & \\
+%--------------------INTEREST----------------------%                 
+\martxt{Interests}  & \blackbullet \normalsize{Throw in a sentence about your hobbies to show you're a well rounded person.}\\
+\end{longtable}
+\end{center}
+\end{document}
